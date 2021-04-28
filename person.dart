@@ -5,10 +5,8 @@ void main() {
                      dateOfBirth: dob,
                      weight: 72.55,
                      height: 1.75);
-  print("Name: "+p1.fullName);
-  print("Age: "+p1.calculateAge().toString());
-  print("BMI: "+p1.calculateBMI().toString());
   
+  print(p1.toString());
   //Create an object of Person with name as John Doe, Date of Birth will be 10th May, 1995; Weight: 72.55Kgs, Height: 1.75m and print in the below format
 
   //Name: John Doe,
@@ -45,5 +43,7 @@ class Person {
   }
 
   @override
-  String toString() => "";
+  String toString(){
+   return ("Name: "+fullName+"\nAge: "+calculateAge().toString()+"\nBMI: "+calculateBMI().toString());
+  } 
 }
